@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Sticky Slider Navigation (Responsive)</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="./categories.css">
+<link rel="stylesheet" href="./nav.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+  <header class="header">
+  <div class="container header__container">
+<div class="header__logo">
+  <img class="header__img" src="./green-block.png" width="50">
+  <h1 class="header__title">Revogreen<span class="header__light"> Technologies</span></h1>
+</div>
+     <button type="checkbox" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar" onclick="pushDown(this)">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+  <div class="header__menu">
+    <nav id="navbar" class="header__nav collapse">
+      <ul class="header__elenco">
+        <li class="header__el"><a href="#" class="header__link">Home</a></li>
+        <li class="header__el"><a href="#" class="header__link">About us</a></li>
+        <li class="header__el"><a href="#" class="header__link">Products</a></li>
+        <li class="header__el"><a href="#" class="header__link">Contact us</a></li>
+      </ul>
+    </nav>
+  </div>
+    </div>
+</header>
+<section id="et-hero-tabs-container">
+    <div class="et-hero-tabs-container">
+      <a class="et-hero-tab" href="#tab-es6">BMS Li-ion</a>
+      <a class="et-hero-tab" href="#tab-es6">BMS Li-FePo4</a>
+      <a class="et-hero-tab" href="#tab-flexbox">Battery Discharger</a>
+      <a class="et-hero-tab" href="#tab-react">BLDC Controller</a>
+      <span class="et-hero-tab-slider"></span>
+    </div>
+  </section>
+
+  <!-- Experiment begins here -->
+  <header class='masthead'>
+  <!-- <div class='brand-container'>
+    <a href='#'>
+      <span class='brand-initials'>Es</span>
+      <span class='brand-name'>Elemental Shift</span>
+    </a>
+  </div> -->
+  <nav>
+    <div class='nav-container'>
+      <div>
+        <input id='slider1' name='slider1' type='checkbox'>
+        <label class='slide has-child' for='slider1'>
+          <span class='element'>Bg</span>
+          <span class='name'>Blog</span>
+        </label>
+        <div class='child-menu'>
+          <a href='#'>Recent</a>
+          <a href='#'>Archives</a>
+          <a href='#'>Categories</a>
+        </div>
+      </div>
+      <div>
+        <a class='slide' href='#'>
+          <span class='element'>Po</span>
+          <span class='name'>Portfolio</span>
+        </a>
+      </div>
+      <div>
+        <input id='slider2' name='slider2' type='checkbox'>
+        <label class='slide has-child' for='slider2'>
+          <span class='element'>Xp</span>
+          <span class='name'>Laboratory</span>
+        </label>
+        <div class='child-menu'>
+          <a href='#'>PHP</a>
+          <a href='#'>Javascript</a>
+          <a href='#'>Css</a>
+          <a href='#'>Ruby</a>
+          <a href='#'>Python</a>
+          <a href='#'>Design</a>
+        </div>
+      </div>
+      <div>
+        <a class='slide' href='#'>
+          <span class='element'>Ab</span>
+          <span class='name'>About</span>
+        </a>
+      </div>
+      <div>
+        <a class='slide' href='#'>
+          <span class='element'>C</span>
+          <span class='name'>Contact</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div class='social-container'>
+    <span>
+      <a class='social-roll github' href='#'></a>
+    </span>
+    <span>
+      <a class='social-roll twitter' href='#'></a>
+    </span>
+    <span>
+      <a class='social-roll linkedin' href='#'></a>
+    </span>
+    <span>
+      <a class='social-roll rss' href='#'></a>
+    </span>
+  </div>
+</header>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script>
+  function pushDown(e) {
+    console.log(e)
+    var content = document.getElementById('body');
+
+    // document.getElementById("et-hero-tabs-container").style.top = "120px"
+    // console.log(content)
+    if(e.checked)
+     content.setAttribute('class', 'push-down');
+    else content.setAttribute('class', '');
+  }
+</script>
+</body>
+</html>
