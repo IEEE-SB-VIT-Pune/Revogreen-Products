@@ -206,7 +206,7 @@ nav input:checked ~ .has-child .name:after {
   transform: rotateX(180deg);
 }
 
-@media (min-width: 48.0625em) {
+@media only screen and (min-width: 48.0625em) {
   nav {
     display: block;
     table-layout: auto;
@@ -297,13 +297,12 @@ nav input:checked ~ .has-child .name:after {
   display: block;
 }
 
-@media (min-width: 48.0625em) {
+@media only screen and (min-width: 48.0625em) {
   .masthead {
     position: absolute;
-    /* top: 0; */
-    /* top: 10px; */
-    margin-top: 50px;
+    top: 0;
     left: 0;
+    margin-top: 200px;
     width: 150px;
   }
   .masthead .brand-container {
