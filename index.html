@@ -38,6 +38,7 @@
   </div>
     </div>
 </header>
+<div id="parent">
 <section id="et-hero-tabs-container">
     <div class="et-hero-tabs-container">
       <a class="et-hero-tab" href="#tab-es6">BMS Li-ion</a>
@@ -49,7 +50,7 @@
   </section>
 
   <!-- Experiment begins here -->
-  <header class='masthead'>
+  <header class='masthead' id="masthead">
   <!-- <div class='brand-container'>
     <a href='#'>
       <span class='brand-initials'>Es</span>
@@ -192,21 +193,30 @@
     </span>
   </div>
 </header>
+</div>
 
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
 <script>
   function pushDown(e) {
-    console.log(e)
-    var content = document.getElementById('body');
-
-    // document.getElementById("et-hero-tabs-container").style.top = "120px"
+    var content = document.getElementsByClassName('navbar-toggle');
+    const flag = content[0].attributes[4].value === "true";
+    // console.log(flag)
+    if (flag) {
+      document.getElementById("et-hero-tabs-container").style.marginTop = "0vw"
+      document.getElementById("masthead").style.marginTop = "0vw"
+      return;
+    }
+    document.getElementById("et-hero-tabs-container").style.marginTop = "50vw"
+    document.getElementById("masthead").style.marginTop = "15vw"
     // console.log(content)
-    if(e.checked)
-     content.setAttribute('class', 'push-down');
-    else content.setAttribute('class', '');
+    // if(e.checked)
+    //  content.setAttribute('class', 'push-down');
+    // else content.setAttribute('class', '');
   }
 </script>
+<script src="./script.js"></script>
+<!-- <script src="./nav.js"></script> -->
 </body>
 </html>
