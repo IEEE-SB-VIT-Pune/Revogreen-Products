@@ -48,7 +48,7 @@ body {
   vertical-align: middle;
 }
 .header__title {
-  font-size: 18px;
+  font-size: 15px;
   margin: 0;
   margin-left: 10px;
   display: inline-block;
@@ -82,11 +82,13 @@ body {
     margin: 0;
     display: inline-block;
     margin-right: 10px;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .header__container {
     width: 100%;
     padding: 0;
+    z-index: 100;
+    background-color: #fff;
   }
   .header__menu {
     width: 100%;
