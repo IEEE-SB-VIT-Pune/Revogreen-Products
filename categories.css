@@ -206,6 +206,11 @@ nav input:checked ~ .has-child .name:after {
   transform: rotateX(180deg);
 }
 
+nav {
+  display: block;
+  table-layout: auto;
+}
+
 @media only screen and (min-width: 48.0625em) {
   nav {
     display: block;
@@ -311,4 +316,33 @@ nav input:checked ~ .has-child .name:after {
   .masthead .brand-container a {
     display: block;
   }
+}
+
+@media only screen and (max-width: 48.0625em) {
+  .nav-container {
+    display: flex !important;
+    flex-direction: column;
+  }
+
+  .slide {
+    border-color: #8cc63f !important;
+    display: inline-block !important;
+    width: 60px;
+  }
+
+   @keyframes myMove {
+  0%   {background: red;}
+  25%  {background: blue;}
+  50%  {background: yellow;}
+  75%  {background: green;}
+  100% {background: red;}
+}
+
+  .slide:hover {
+    /* background-color: #8cc63f; */
+    /* transition: background-color 0.3s myMove; */
+    animation-name: myMove;
+    animation-duration: 3s;
+  }
+
 }
